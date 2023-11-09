@@ -1,0 +1,185 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Open-Sans',sans-serif;
+    text-align: center;
+}
+
+body {
+    background: linear-gradient(to right, #f8aa10, #abd5df);
+    background: linear-gradient(to right,#FF5F6D, #FFC371);
+
+}
+
+.container {
+    width: 700px;
+    max-width: 90%;
+    max-height: 460px;
+    margin: 100px auto;
+    overflow: hidden;
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0px 0px 15px #00000033;
+    position: relative;
+}
+
+.container >div:first-of-type {
+    position: relative;
+}
+
+.container >div:first-of-type.win::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.651);
+}
+
+.container .flex {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    /* justify-content: space-around; */
+}
+
+.container .flex div h2 {
+    text-transform: uppercase;
+    font-size: 30px;
+    margin-bottom: 30px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    color: #e2e2e2;
+}
+
+.container .flex div h2 i {
+    color: #000000;
+}
+
+@media (max-width: 550px) {
+    .container .flex div h2 {
+        font-size: 18px;
+    }
+}
+
+.container .flex div h3 {
+    text-transform: uppercase;
+    font-family: 'Raleway Dots', sans-serif;
+    font-size: 70px;
+    margin-bottom: 100px;
+    font-weight: normal;
+    color: #f33145;
+}
+
+@media (max-width: 550px) {
+    .container .flex div h3 {
+        font-size: 40px;
+    }
+}
+
+.container .flex .tempScore {
+    width: 60px;
+    height: 35px;
+    color: white;
+    font-size: 18px;
+    background-color: #f33145;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+@media (max-width: 550px) {
+    .container .flex div .tempScore {
+        width: 50px;
+        height: 35px;
+    }
+}
+
+.container .flex .center {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%,0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    z-index: 2;
+}
+
+.container .flex .center p.scoreMaxElm {
+    color: rgba(0, 0, 0, 0.884);
+    margin-top: -25px;
+    margin-bottom: 10px;
+}
+
+.container .flex .center img {
+    margin-top: 60px;
+    margin-bottom: 80px;
+    height: 90px;
+    box-shadow: 5px 5px 5px #ccc;
+    border-radius: 10px;
+    object-fit: cover;
+    background-color: #ffffff;
+}
+
+@media (max-width: 550px) {
+    .container .flex .center img {
+        width: 60px;
+        height: 70px;
+        margin-top: 40px;
+    }
+}
+
+.container .flex .center button {
+    all: unset;
+    display: block;
+    margin: auto;
+    text-transform: uppercase;
+    font-size: 13px;
+    text-align: left;
+    cursor: pointer;
+    color: rgba(0, 0, 0, 0.884);
+}
+
+.container .flex .center button#newGameBtn {
+    /* margin-bottom: 30px; */
+    font-size: 18px;
+    letter-spacing: 1px;
+    color: #acaaae;
+}
+
+.container .flex .center button i {
+    color: #f33145;
+}
+
+
+.container .flex .center button#lanceBtn {
+    margin-bottom: 20px;
+}
+
+.container .flex .center button:disabled {
+    color: rgba(0, 0, 0, 0.288);
+    cursor: no-drop;
+}
+
+
+.container .flex #joueur1,
+.container .flex #joueur2 {
+    width: 50%;
+    padding: 90px 0;
+}
+
+.container .flex div.active {
+   background-color: rgb(240 240 240);
+}
+
+.container .flex div.active h2 {
+    color: #000000;
+}
+
+.container .flex div.active h2 i {
+    color: rgb(16, 189, 16);
+}
